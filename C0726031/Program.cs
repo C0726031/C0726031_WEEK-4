@@ -14,6 +14,7 @@ namespace C0726031
             countryside c = new countryside();
             c.run();
             c.travel();
+            //new Test().fortest();//Anonymous Object Reference
             Console.ReadLine();
 
         }
@@ -52,6 +53,7 @@ namespace C0726031
             village Mapple;
             village Toronto;
             village Ajax;
+        public village currentvillage { get; private set; }
 
             public void run()
             {
@@ -59,27 +61,40 @@ namespace C0726031
                 Mapple = new village();
                 Toronto = new village();
                 Ajax = new village();
+                Ajax.villagename = "Ajax";
                 Ajax.isAstrilde = true;
                 Mapple.villagename = "Mapple";
                 Mapple.nextvillage = Toronto;
                 Toronto.nextvillage = Ajax;
                 Toronto.villagename = "Toronto";
-            Ajax.nextvillage = null;
+                Ajax.nextvillage = null;
         }
         public void travel()
             {
-                village currentvillage = Mapple;
-                while (currentvillage.nextvillage != null) {
-                Console.WriteLine("I am in " + currentvillage.villagename);
+                 currentvillage = Toronto;
+
+            while (true)
+
+
+            {
                 if (currentvillage.isAstrilde)
-                        Console.WriteLine("You found Astrilde in " + currentvillage);
-                    else
-                        currentvillage = currentvillage.nextvillage;
+                {
+                    Console.WriteLine(" Astrilde is in: " + currentvillage.villagename);
+                    Console.ReadLine();
+                }
+
+                else
+
+                    currentvillage = currentvillage.nextvillage;
+
+
+            }
 
                 }
             }
         }
-    }
+
+    
 
 
    
