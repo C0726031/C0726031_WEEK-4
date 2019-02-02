@@ -11,10 +11,32 @@ namespace C0726031
         static void Main(string[] args)
 
         {
-            countryside c = new countryside();
+            // countryside c = new countryside();
+            //c.run();
+            (new LearningExperiment()).run();
+
         }
 
 
+        
+
+    }
+    class LearningExperiment
+    {
+        public void run() { 
+        
+            village Toronto;
+            Toronto = new village();
+            village a, b,c;
+            Toronto.villagename = "Version A";
+            a = Toronto;
+            Toronto = new village();
+            Toronto.villagename = "Version B";
+            b = Toronto;
+            Toronto = new village();
+            Toronto.villagename = "Version C";
+            c = Toronto;
+        }
         class village
 
         {
@@ -24,7 +46,6 @@ namespace C0726031
             public String villagename;
 
         }
-
         class countryside
         {
             village Mapple;
@@ -43,5 +64,6 @@ namespace C0726031
         }
     }
 }
+
 
 
