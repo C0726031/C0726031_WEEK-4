@@ -11,27 +11,35 @@ namespace C0726031
         static void Main(string[] args)
 
         {
+            countryside c = new countryside();
+        }
 
-          }
 
+        class village
 
-            class village
-            
         {
-            bool isAstrildeHere;
-            village nextvillage;
-            village prevvillage;
-            String villagename;
+            public bool isAstrildeHere;
+            public village nextvillage;
+            public village prevvillage;
+            public String villagename;
 
         }
 
         class countryside
         {
-            village mapple;
-            village toronto;
-            village ajax;
-        }
+            village Mapple;
+            village Toronto;
+            village Ajax;
+
+            public void run()
+            {
+
+                Mapple = new village();
+                Mapple.villagename = "Toronto";
+                Mapple.nextvillage = Toronto;
+            }
         }
     }
+}
 
 
