@@ -35,6 +35,8 @@ namespace C0726031
             {
 
                 Mapple = new village();
+                Toronto = new village();
+                Ajax = new village();
                 Mapple.villagename = "Toronto";
                 Mapple.nextvillage = Toronto;
             }
